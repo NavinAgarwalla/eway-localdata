@@ -36,7 +36,7 @@ const app = express();
 app.use(bodyParser.json());
 
 // Load routesform
-app.post('/state-informations',function (req,res) =>{
+app.post('/state-informations',function (req,res) {
  
   const state = req.body.conversation.memory.state;
   const stateInfos = findstateByName(state.value);

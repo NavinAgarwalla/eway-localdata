@@ -7,7 +7,7 @@ const db = require('./data.json');
 
 
 function findstateByName(name) {
-  const data = db.find(p => p.state.toLowerCase() === name.toLowerCase());
+  const data = db.find(p => p.name.toLowerCase() === state.toLowerCase());
   if (!data) {
     return null;
   }

@@ -61,8 +61,8 @@ function getstateInformations(req, res) {
 const app = express();
 app.use(bodyParser.json());
 
-// Load routes
-app.post('/state-informations', getstateInformations);
+// Load routesform
+app.post('/state-informations',getstateInformations);
 //app.post('/pokemon-evolutions', getPokemonEvolutions);
 app.post('/errors', function (req, res) {
   console.error(req.body);

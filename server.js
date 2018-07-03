@@ -9,13 +9,15 @@ const app = express();
 app.use(bodyParser.json());
 
 // Load routesform
+var state;
 app.post('/state-informations',function (req,res) {
  
-  const state = req.body.nlp.entities.state;
+  state = req.body.nlp.entities.state;
   const stateInfos = state.value;
   //const memory = req.body.nlp.entities;
   //var item=[{name:'giza',location:'frd'}];
   //res.send(item);
+
   console.log(state);
 
  
@@ -37,6 +39,11 @@ app.post('/state-informations',function (req,res) {
   }
   
 });
+
+app.get('/state-informations',function(req,res)
+  {
+    res.send(state);
+  });
 
 
 

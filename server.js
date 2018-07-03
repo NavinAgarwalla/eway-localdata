@@ -19,7 +19,24 @@ function findstateByName(state) {
 
 
 
-function getstateInformations(req, res) {
+
+
+
+
+
+
+
+
+
+
+
+
+
+const app = express();
+app.use(bodyParser.json());
+
+// Load routesform
+app.post('/state-informations',function (req,res) =>{
  
   const state = req.body.conversation.memory.state;
   const stateInfos = findstateByName(state.value);
@@ -44,26 +61,10 @@ function getstateInformations(req, res) {
       ],
     });
   }
-}
+});
 
 
 
-
-
-
-
-
-
-
-
-
-
-const app = express();
-app.use(bodyParser.json());
-
-// Load routesform
-app.post('/state-informations',getstateInformations);
-//app.post('/pokemon-evolutions', getPokemonEvolutions);
 app.post('/errors', function (req, res) {
   console.error(req.body);
   res.sendStatus(200);

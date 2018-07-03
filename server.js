@@ -20,8 +20,7 @@ function findstateByName(state) {
 
 
 function getstateInformations(req, res) {
-  curl -H "Authorization: 67a32361689bb8098b01683736432b74" \
-     -X GET "https://api.recast.ai/v2/users/$USER_SLUG/bots/$BOT_SLUG/trainings";
+ 
   const state = req.body.conversation.memory.state;
   const stateInfos = findstateByName(state.value);
    const memory = req.body.conversation.memory;

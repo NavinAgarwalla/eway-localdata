@@ -12,7 +12,7 @@ app.use(bodyParser.json());
 var state;
 app.post('/state-informations',function (req,res) {
  
-  state = req.body.nlp.entities.state.value;
+  state = req.body.nlp.entities.state[0].value;
   const stateInfos = state.value;
   //const memory = req.body.nlp.entities;
   //var item=[{name:'giza',location:'frd'}];

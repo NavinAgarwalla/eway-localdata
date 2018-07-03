@@ -10,15 +10,21 @@ app.use(bodyParser.json());
 
 // Load routesform
 var state;
+var district;
+var botinput;
 app.post('/state-informations',function (req,res) {
  
   state = req.body.nlp.entities.state[0].value;
   const stateInfos = state.value;
+  district = req.body.nlp.entities.district[0].value;
   //const memory = req.body.nlp.entities;
   //var item=[{name:'giza',location:'frd'}];
   //res.send(item);
 
   console.log(state);
+  console.log(district);
+
+  botinput={state:state,district:district};
 
  
 
@@ -42,7 +48,7 @@ app.post('/state-informations',function (req,res) {
 
 app.get('/state-informations',function(req,res)
   {
-    res.send(state);
+    res.send(botinput);
   });
 
 

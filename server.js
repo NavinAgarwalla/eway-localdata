@@ -13,9 +13,10 @@ app.post('/state-informations',function (req,res) {
  
   const state = req.body.nlp.entities.state;
   const stateInfos = state.value;
-   const memory = req.body.nlp.entities;
-  res.send(memory);
-  console.log(memory);
+  //const memory = req.body.nlp.entities;
+  //var item=[{name:'giza',location:'frd'}];
+  //res.send(item);
+  console.log(state);
 
  
 

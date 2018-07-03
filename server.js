@@ -38,9 +38,9 @@ app.use(bodyParser.json());
 // Load routesform
 app.post('/state-informations',function (req,res) {
  
-  const state = req.body.conversation.memory.state;
+  const state = req.body.nlp.entities.state;
   const stateInfos = findstateByName(state.value);
-   const memory = req.body.conversation.memory;
+   const memory = req.body.nlp.entities;
   
   console.log(memory);
 

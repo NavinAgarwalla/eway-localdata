@@ -5,33 +5,6 @@ const bodyParser = require('body-parser');
 const db = require('./data.json');
 
 
-
-function findstateByName(name) {
-  const data = db.find(p => p.name.toLowerCase() === name.toLowerCase());
-  if (!data) {
-    return null;
-  }
-  return data;
-};
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 const app = express();
 app.use(bodyParser.json());
 
@@ -39,7 +12,7 @@ app.use(bodyParser.json());
 app.post('/state-informations',function (req,res) {
  
   const state = req.body.nlp.entities.state;
-  const stateInfos = findstateByName(state.value);
+  const stateInfos = state.value;
    const memory = req.body.nlp.entities;
   
   console.log(memory);

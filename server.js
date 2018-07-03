@@ -9,7 +9,7 @@ const app = express();
 app.use(bodyParser.json());
 
 // Load routesform
-app.get('/state-informations',function (req,res) {
+app.post('/state-informations',function (req,res) {
  
   const state = req.body.nlp.entities.state;
   const stateInfos = state.value;
@@ -18,7 +18,7 @@ app.get('/state-informations',function (req,res) {
   console.log(memory);
 
  
-/*
+
   if (!stateInfos) {
     res.json({
       replies: [
@@ -34,7 +34,7 @@ app.get('/state-informations',function (req,res) {
       ],
     });
   }
-  */
+  
 });
 
 

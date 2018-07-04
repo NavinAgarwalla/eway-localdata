@@ -1,7 +1,6 @@
 {
   "name": "eway-localdata",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -10,9 +9,20 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "axios": "^0.18.0",
     "body": "^5.1.0",
     "express": "^4.16.3",
     "parser": "^0.1.4",
     "touch": "^3.1.0"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NavinAgarwalla/eway-localdata.git"
+  },
+  "bugs": {
+    "url": "https://github.com/NavinAgarwalla/eway-localdata/issues"
+  },
+  "homepage": "https://github.com/NavinAgarwalla/eway-localdata#readme",
+  "description": ""
 }

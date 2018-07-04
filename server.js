@@ -31,7 +31,7 @@ app.post('/state-informations',function (req,res) {
   if (!stateInfos) {
     res.json({
       replies: [
-        { type: 'text', content: `I don't know a state called ${state} :(` },
+        { type: 'text', content: `The contact details of ${state} is displayed :)` },
       ],
     });
   } else {
